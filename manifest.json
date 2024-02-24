@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "ChromeExtKit ",
+  "description": "Get a head start on Chrome Extension development with this V3 Starter kit.",
+  "version": "0.0.1",
+  "icons": {
+    "16": "assets/16.png",
+    "48": "assets/48.png",
+    "128": "assets/128.png"
+  },
+  "options_page": "settings/settings.html",
+  "action": {
+    "default_title": "ChromeExtKit",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
